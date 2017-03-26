@@ -30,12 +30,9 @@ matrix:
       env: DISABLE_FUNCTIONS=
   allow_failures:
     - php: "7.0"
-#<<<<<<< ViktorBodrogi/beta-works
-#=======
     - php: "5.5"
     - php: "5.4"
     - php: "5.3"
-#>>>>>>> ViktorBodrogi/beta/travis-patch-1
     - php: "hhvm"
   exclude:
     - php: "hhvm"
@@ -46,11 +43,9 @@ services:
   - "mysql"
   - "postgresql"
 
-#=======
 install:
   - wget -O ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit.phar
   - chmod 755 ~/.phpenv/versions/hhvm/bin/phpunit
-#>>>>>>> master
 
 before_script:
   # Disable the HHVM JIT for faster Unit Testing
