@@ -9,6 +9,9 @@ php:
   - "5.3"
 
 env:
+  - DOKUWIKI=
+  - DOKUWIKI=master
+  - DOKUWIKI=stable
   #- DISABLE_FUNCTIONS=
   #- DISABLE_FUNCTIONS="gzopen"
 matrix:
@@ -29,6 +32,8 @@ matrix:
         - postgresql
       env: DISABLE_FUNCTIONS=
   allow_failures:
+    - env: DOKUWIKI=
+    - env: DOKUWIKI=master
     - php: "7.0"
     - php: "5.5"
     - php: "5.4"
