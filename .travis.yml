@@ -8,8 +8,8 @@ php:
   - "5.3"
   - "hhvm"
 env:
-  - DISABLE_FUNCTIONS=
-  - DISABLE_FUNCTIONS="gzopen"
+  #- DISABLE_FUNCTIONS=
+  #- DISABLE_FUNCTIONS="gzopen"
 matrix:
   allow_failures:
     - php: "hhvm"
